@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Valentine Nishalini ❤️</title>
+
+<style>
+body{
+margin:0;
+font-family:sans-serif;
+background:linear-gradient(135deg,#ff758c,#ff7eb3);
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+color:white;
+text-align:center;
+}
+
+.card{
+width:90%;
+max-width:360px;
+background:rgba(255,255,255,0.18);
+padding:20px;
+border-radius:20px;
+box-shadow:0 8px 25px rgba(0,0,0,0.3);
+}
+
+h1{
+margin:10px 0;
+}
+
+.heart{
+font-size:40px;
+animation:beat 1s infinite;
+}
+
+img{
+width:100%;
+height:220px;
+object-fit:cover;
+border-radius:15px;
+}
+
+button{
+margin-top:15px;
+padding:12px;
+width:100%;
+border:none;
+border-radius:30px;
+background:#ff2e63;
+color:white;
+font-size:16px;
+}
+
+@keyframes beat{
+0%,100%{transform:scale(1);}
+50%{transform:scale(1.2);}
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+<h1>Happy Valentine’s Day Nishalini 💕</h1>
+
+<div class="heart">❤️</div>
+
+<img id="slide" src="photo1.jpg">
+
+<p>
+Nishalini, every moment with you feels magical 💖  
+You are my smile, my happiness, my forever ❤️
+</p>
+
+<button onclick="showLove()">Tap Surprise 💝</button>
+
+</div>
+
+<audio autoplay loop>
+<source src="love.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+
+let images=["photo1.jpg","photo2.jpg","photo3.jpg"];
+let i=0;
+
+setInterval(()=>{
+i++;
+if(i>=images.length){i=0;}
+document.getElementById("slide").src=images[i];
+},2500);
+
+function showLove(){
+alert("Nishalini ❤️ I Love You Forever 💕");
+}
+
+</script>
+
+</body>
+</html>
